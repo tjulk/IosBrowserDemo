@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		110E97A715FC25EF00F0C8DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E97A615FC25EF00F0C8DF /* UIKit.framework */; };
+		110E97A915FC25EF00F0C8DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E97A815FC25EF00F0C8DF /* Foundation.framework */; };
+		110E97AB15FC25EF00F0C8DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E97AA15FC25EF00F0C8DF /* CoreGraphics.framework */; };
+		E1175ED316BA56930079D2D1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1175ED216BA56930079D2D1 /* MediaPlayer.framework */; };
+		E1175ED516BA569C0079D2D1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1175ED416BA569B0079D2D1 /* AVFoundation.framework */; };
+		E1175ED716BA56D90079D2D1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1175ED616BA56D90079D2D1 /* CoreMedia.framework */; };
+		E188A4D716BA63400054F94E /* CustomMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A4CE16BA63400054F94E /* CustomMoviePlayerController.m */; };
+		E188A4D816BA63400054F94E /* CustomMoviePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E188A4CF16BA63400054F94E /* CustomMoviePlayerController.xib */; };
+		E188A4D916BA63400054F94E /* CustomPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A4D116BA63400054F94E /* CustomPlayerView.m */; };
+		E188A4DA16BA63400054F94E /* JQWebVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A4D316BA63400054F94E /* JQWebVideoViewController.m */; };
+		E188A4DB16BA63400054F94E /* JQWebVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E188A4D416BA63400054F94E /* JQWebVideoViewController.xib */; };
+		E188A4DC16BA63400054F94E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A4D616BA63400054F94E /* MBProgressHUD.m */; };
+		E188A4E116BA63510054F94E /* BrowserTab.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A4DE16BA63510054F94E /* BrowserTab.m */; };
+		E188A4E216BA63510054F94E /* BrowserTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A4E016BA63510054F94E /* BrowserTabView.m */; };
+		E188A51116BA635F0054F94E /* ic_brightness_adjust_videoplayer_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E316BA635F0054F94E /* ic_brightness_adjust_videoplayer_dark.png */; };
+		E188A51216BA635F0054F94E /* ic_brightness_adjust_videoplayer_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E416BA635F0054F94E /* ic_brightness_adjust_videoplayer_light.png */; };
+		E188A51316BA635F0054F94E /* ic_brightness_titlelbar_videoplayer_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E516BA635F0054F94E /* ic_brightness_titlelbar_videoplayer_pressed.png */; };
+		E188A51416BA635F0054F94E /* ic_brightness_titlelbar_videoplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E616BA635F0054F94E /* ic_brightness_titlelbar_videoplayer.png */; };
+		E188A51516BA635F0054F94E /* ic_download_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E716BA635F0054F94E /* ic_download_selected.png */; };
+		E188A51616BA635F0054F94E /* ic_download_titlebar_videoplayer_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E816BA635F0054F94E /* ic_download_titlebar_videoplayer_disable.png */; };
+		E188A51716BA635F0054F94E /* ic_download_titlebar_videoplayer_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4E916BA635F0054F94E /* ic_download_titlebar_videoplayer_pressed.png */; };
+		E188A51816BA635F0054F94E /* ic_download_titlebar_videoplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4EA16BA635F0054F94E /* ic_download_titlebar_videoplayer.png */; };
+		E188A51916BA635F0054F94E /* ic_downloaded.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4EB16BA635F0054F94E /* ic_downloaded.png */; };
+		E188A51A16BA635F0054F94E /* ic_downloading.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4EC16BA635F0054F94E /* ic_downloading.png */; };
+		E188A51B16BA635F0054F94E /* ic_episode_titlebar_videoplayer_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4ED16BA635F0054F94E /* ic_episode_titlebar_videoplayer_disable.png */; };
+		E188A51C16BA635F0054F94E /* ic_episode_titlebar_videoplayer_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4EE16BA635F0054F94E /* ic_episode_titlebar_videoplayer_pressed.png */; };
+		E188A51D16BA635F0054F94E /* ic_episode_titlebar_videoplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4EF16BA635F0054F94E /* ic_episode_titlebar_videoplayer.png */; };
+		E188A51E16BA635F0054F94E /* ic_next_play_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F016BA635F0054F94E /* ic_next_play_disable.png */; };
+		E188A51F16BA635F0054F94E /* ic_next_play_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F116BA635F0054F94E /* ic_next_play_pressed.png */; };
+		E188A52016BA635F0054F94E /* ic_next_play.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F216BA635F0054F94E /* ic_next_play.png */; };
+		E188A52116BA635F0054F94E /* ic_play_media_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F316BA635F0054F94E /* ic_play_media_disable.png */; };
+		E188A52216BA635F0054F94E /* ic_play_media_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F416BA635F0054F94E /* ic_play_media_pressed.png */; };
+		E188A52316BA635F0054F94E /* ic_play_media.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F516BA635F0054F94E /* ic_play_media.png */; };
+		E188A52416BA635F0054F94E /* ic_retreat_media_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F616BA635F0054F94E /* ic_retreat_media_disable.png */; };
+		E188A52516BA635F0054F94E /* ic_retreat_media_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F716BA635F0054F94E /* ic_retreat_media_pressed.png */; };
+		E188A52616BA635F0054F94E /* ic_retreat_media.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F816BA635F0054F94E /* ic_retreat_media.png */; };
+		E188A52716BA635F0054F94E /* ic_stop_media_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4F916BA635F0054F94E /* ic_stop_media_disable.png */; };
+		E188A52816BA635F0054F94E /* ic_stop_media_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4FA16BA635F0054F94E /* ic_stop_media_pressed.png */; };
+		E188A52916BA635F0054F94E /* ic_stop_media.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4FB16BA635F0054F94E /* ic_stop_media.png */; };
+		E188A52A16BA635F0054F94E /* ic_volume_btn_videoplayer_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4FC16BA635F0054F94E /* ic_volume_btn_videoplayer_pressed.png */; };
+		E188A52B16BA635F0054F94E /* ic_volume_btn_videoplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4FD16BA635F0054F94E /* ic_volume_btn_videoplayer.png */; };
+		E188A52C16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4FE16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_disable.png */; };
+		E188A52D16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A4FF16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_pressed.png */; };
+		E188A52E16BA635F0054F94E /* ic_zoom_in_btn_videoplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50016BA635F0054F94E /* ic_zoom_in_btn_videoplayer.png */; };
+		E188A52F16BA635F0054F94E /* ic_zoom_out_btn_videoplayer_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50116BA635F0054F94E /* ic_zoom_out_btn_videoplayer_disable.png */; };
+		E188A53016BA635F0054F94E /* ic_zoom_out_btn_videoplayer_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50216BA635F0054F94E /* ic_zoom_out_btn_videoplayer_pressed.png */; };
+		E188A53116BA635F0054F94E /* ic_zoom_out_btn_videoplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50316BA635F0054F94E /* ic_zoom_out_btn_videoplayer.png */; };
+		E188A53216BA635F0054F94E /* lock_normal_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50416BA635F0054F94E /* lock_normal_lock.png */; };
+		E188A53316BA635F0054F94E /* lock_normal_unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50516BA635F0054F94E /* lock_normal_unlock.png */; };
+		E188A53416BA635F0054F94E /* lock_press_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50616BA635F0054F94E /* lock_press_lock.png */; };
+		E188A53516BA635F0054F94E /* lock_press_unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50716BA635F0054F94E /* lock_press_unlock.png */; };
+		E188A53616BA635F0054F94E /* tab_background.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50816BA635F0054F94E /* tab_background.png */; };
+		E188A53716BA635F0054F94E /* tab_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50916BA635F0054F94E /* tab_background@2x.png */; };
+		E188A53816BA635F0054F94E /* tab_close.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50A16BA635F0054F94E /* tab_close.png */; };
+		E188A53916BA635F0054F94E /* tab_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50B16BA635F0054F94E /* tab_close@2x.png */; };
+		E188A53A16BA635F0054F94E /* tab_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50C16BA635F0054F94E /* tab_normal.png */; };
+		E188A53B16BA635F0054F94E /* tab_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50D16BA635F0054F94E /* tab_normal@2x.png */; };
+		E188A53C16BA635F0054F94E /* tab_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50E16BA635F0054F94E /* tab_selected.png */; };
+		E188A53D16BA635F0054F94E /* tab_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A50F16BA635F0054F94E /* tab_selected@2x.png */; };
+		E188A53E16BA635F0054F94E /* titlebar_return_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A51016BA635F0054F94E /* titlebar_return_normal.png */; };
+		E188A54816BA63790054F94E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A54016BA63790054F94E /* AppDelegate.m */; };
+		E188A54916BA63790054F94E /* BaiduPlayer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E188A54116BA63790054F94E /* BaiduPlayer-Info.plist */; };
+		E188A54A16BA63790054F94E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A54316BA63790054F94E /* main.m */; };
+		E188A54B16BA63790054F94E /* tab_new_add.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A54416BA63790054F94E /* tab_new_add.png */; };
+		E188A54C16BA63790054F94E /* tab_new_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A54516BA63790054F94E /* tab_new_add@2x.png */; };
+		E188A54D16BA63790054F94E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A54716BA63790054F94E /* ViewController.m */; };
+		E188A56716BA72340054F94E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E188A56316BA72340054F94E /* InfoPlist.strings */; };
+		E188A56816BA72340054F94E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E188A56516BA72340054F94E /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		110E97A615FC25EF00F0C8DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		110E97A815FC25EF00F0C8DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		110E97AA15FC25EF00F0C8DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		110E97C415FC25F000F0C8DF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E1175ED216BA56930079D2D1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E1175ED416BA569B0079D2D1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E1175ED616BA56D90079D2D1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E188A4CD16BA63400054F94E /* CustomMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomMoviePlayerController.h; path = BaiduPlayer/MoviePlayer/CustomMoviePlayerController.h; sourceTree = SOURCE_ROOT; };
+		E188A4CE16BA63400054F94E /* CustomMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomMoviePlayerController.m; path = BaiduPlayer/MoviePlayer/CustomMoviePlayerController.m; sourceTree = SOURCE_ROOT; };
+		E188A4CF16BA63400054F94E /* CustomMoviePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomMoviePlayerController.xib; path = BaiduPlayer/MoviePlayer/CustomMoviePlayerController.xib; sourceTree = SOURCE_ROOT; };
+		E188A4D016BA63400054F94E /* CustomPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPlayerView.h; path = BaiduPlayer/MoviePlayer/CustomPlayerView.h; sourceTree = SOURCE_ROOT; };
+		E188A4D116BA63400054F94E /* CustomPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPlayerView.m; path = BaiduPlayer/MoviePlayer/CustomPlayerView.m; sourceTree = SOURCE_ROOT; };
+		E188A4D216BA63400054F94E /* JQWebVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQWebVideoViewController.h; path = BaiduPlayer/MoviePlayer/JQWebVideoViewController.h; sourceTree = SOURCE_ROOT; };
+		E188A4D316BA63400054F94E /* JQWebVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQWebVideoViewController.m; path = BaiduPlayer/MoviePlayer/JQWebVideoViewController.m; sourceTree = SOURCE_ROOT; };
+		E188A4D416BA63400054F94E /* JQWebVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JQWebVideoViewController.xib; path = BaiduPlayer/MoviePlayer/JQWebVideoViewController.xib; sourceTree = SOURCE_ROOT; };
+		E188A4D516BA63400054F94E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = BaiduPlayer/MoviePlayer/MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		E188A4D616BA63400054F94E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = BaiduPlayer/MoviePlayer/MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		E188A4DD16BA63510054F94E /* BrowserTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowserTab.h; path = BaiduPlayer/BrowserTabView/BrowserTab.h; sourceTree = SOURCE_ROOT; };
+		E188A4DE16BA63510054F94E /* BrowserTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowserTab.m; path = BaiduPlayer/BrowserTabView/BrowserTab.m; sourceTree = SOURCE_ROOT; };
+		E188A4DF16BA63510054F94E /* BrowserTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowserTabView.h; path = BaiduPlayer/BrowserTabView/BrowserTabView.h; sourceTree = SOURCE_ROOT; };
+		E188A4E016BA63510054F94E /* BrowserTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowserTabView.m; path = BaiduPlayer/BrowserTabView/BrowserTabView.m; sourceTree = SOURCE_ROOT; };
+		E188A4E316BA635F0054F94E /* ic_brightness_adjust_videoplayer_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_brightness_adjust_videoplayer_dark.png; path = BaiduPlayer/BrowserTabView/img/ic_brightness_adjust_videoplayer_dark.png; sourceTree = SOURCE_ROOT; };
+		E188A4E416BA635F0054F94E /* ic_brightness_adjust_videoplayer_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_brightness_adjust_videoplayer_light.png; path = BaiduPlayer/BrowserTabView/img/ic_brightness_adjust_videoplayer_light.png; sourceTree = SOURCE_ROOT; };
+		E188A4E516BA635F0054F94E /* ic_brightness_titlelbar_videoplayer_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_brightness_titlelbar_videoplayer_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_brightness_titlelbar_videoplayer_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4E616BA635F0054F94E /* ic_brightness_titlelbar_videoplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_brightness_titlelbar_videoplayer.png; path = BaiduPlayer/BrowserTabView/img/ic_brightness_titlelbar_videoplayer.png; sourceTree = SOURCE_ROOT; };
+		E188A4E716BA635F0054F94E /* ic_download_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_download_selected.png; path = BaiduPlayer/BrowserTabView/img/ic_download_selected.png; sourceTree = SOURCE_ROOT; };
+		E188A4E816BA635F0054F94E /* ic_download_titlebar_videoplayer_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_download_titlebar_videoplayer_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_download_titlebar_videoplayer_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4E916BA635F0054F94E /* ic_download_titlebar_videoplayer_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_download_titlebar_videoplayer_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_download_titlebar_videoplayer_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4EA16BA635F0054F94E /* ic_download_titlebar_videoplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_download_titlebar_videoplayer.png; path = BaiduPlayer/BrowserTabView/img/ic_download_titlebar_videoplayer.png; sourceTree = SOURCE_ROOT; };
+		E188A4EB16BA635F0054F94E /* ic_downloaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_downloaded.png; path = BaiduPlayer/BrowserTabView/img/ic_downloaded.png; sourceTree = SOURCE_ROOT; };
+		E188A4EC16BA635F0054F94E /* ic_downloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_downloading.png; path = BaiduPlayer/BrowserTabView/img/ic_downloading.png; sourceTree = SOURCE_ROOT; };
+		E188A4ED16BA635F0054F94E /* ic_episode_titlebar_videoplayer_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_episode_titlebar_videoplayer_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_episode_titlebar_videoplayer_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4EE16BA635F0054F94E /* ic_episode_titlebar_videoplayer_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_episode_titlebar_videoplayer_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_episode_titlebar_videoplayer_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4EF16BA635F0054F94E /* ic_episode_titlebar_videoplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_episode_titlebar_videoplayer.png; path = BaiduPlayer/BrowserTabView/img/ic_episode_titlebar_videoplayer.png; sourceTree = SOURCE_ROOT; };
+		E188A4F016BA635F0054F94E /* ic_next_play_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_next_play_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_next_play_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4F116BA635F0054F94E /* ic_next_play_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_next_play_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_next_play_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4F216BA635F0054F94E /* ic_next_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_next_play.png; path = BaiduPlayer/BrowserTabView/img/ic_next_play.png; sourceTree = SOURCE_ROOT; };
+		E188A4F316BA635F0054F94E /* ic_play_media_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_play_media_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_play_media_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4F416BA635F0054F94E /* ic_play_media_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_play_media_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_play_media_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4F516BA635F0054F94E /* ic_play_media.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_play_media.png; path = BaiduPlayer/BrowserTabView/img/ic_play_media.png; sourceTree = SOURCE_ROOT; };
+		E188A4F616BA635F0054F94E /* ic_retreat_media_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_retreat_media_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_retreat_media_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4F716BA635F0054F94E /* ic_retreat_media_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_retreat_media_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_retreat_media_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4F816BA635F0054F94E /* ic_retreat_media.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_retreat_media.png; path = BaiduPlayer/BrowserTabView/img/ic_retreat_media.png; sourceTree = SOURCE_ROOT; };
+		E188A4F916BA635F0054F94E /* ic_stop_media_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_stop_media_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_stop_media_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4FA16BA635F0054F94E /* ic_stop_media_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_stop_media_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_stop_media_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4FB16BA635F0054F94E /* ic_stop_media.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_stop_media.png; path = BaiduPlayer/BrowserTabView/img/ic_stop_media.png; sourceTree = SOURCE_ROOT; };
+		E188A4FC16BA635F0054F94E /* ic_volume_btn_videoplayer_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_volume_btn_videoplayer_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_volume_btn_videoplayer_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A4FD16BA635F0054F94E /* ic_volume_btn_videoplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_volume_btn_videoplayer.png; path = BaiduPlayer/BrowserTabView/img/ic_volume_btn_videoplayer.png; sourceTree = SOURCE_ROOT; };
+		E188A4FE16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_zoom_in_btn_videoplayer_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_zoom_in_btn_videoplayer_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A4FF16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_zoom_in_btn_videoplayer_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_zoom_in_btn_videoplayer_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A50016BA635F0054F94E /* ic_zoom_in_btn_videoplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_zoom_in_btn_videoplayer.png; path = BaiduPlayer/BrowserTabView/img/ic_zoom_in_btn_videoplayer.png; sourceTree = SOURCE_ROOT; };
+		E188A50116BA635F0054F94E /* ic_zoom_out_btn_videoplayer_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_zoom_out_btn_videoplayer_disable.png; path = BaiduPlayer/BrowserTabView/img/ic_zoom_out_btn_videoplayer_disable.png; sourceTree = SOURCE_ROOT; };
+		E188A50216BA635F0054F94E /* ic_zoom_out_btn_videoplayer_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_zoom_out_btn_videoplayer_pressed.png; path = BaiduPlayer/BrowserTabView/img/ic_zoom_out_btn_videoplayer_pressed.png; sourceTree = SOURCE_ROOT; };
+		E188A50316BA635F0054F94E /* ic_zoom_out_btn_videoplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_zoom_out_btn_videoplayer.png; path = BaiduPlayer/BrowserTabView/img/ic_zoom_out_btn_videoplayer.png; sourceTree = SOURCE_ROOT; };
+		E188A50416BA635F0054F94E /* lock_normal_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock_normal_lock.png; path = BaiduPlayer/BrowserTabView/img/lock_normal_lock.png; sourceTree = SOURCE_ROOT; };
+		E188A50516BA635F0054F94E /* lock_normal_unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock_normal_unlock.png; path = BaiduPlayer/BrowserTabView/img/lock_normal_unlock.png; sourceTree = SOURCE_ROOT; };
+		E188A50616BA635F0054F94E /* lock_press_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock_press_lock.png; path = BaiduPlayer/BrowserTabView/img/lock_press_lock.png; sourceTree = SOURCE_ROOT; };
+		E188A50716BA635F0054F94E /* lock_press_unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lock_press_unlock.png; path = BaiduPlayer/BrowserTabView/img/lock_press_unlock.png; sourceTree = SOURCE_ROOT; };
+		E188A50816BA635F0054F94E /* tab_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_background.png; path = BaiduPlayer/BrowserTabView/img/tab_background.png; sourceTree = SOURCE_ROOT; };
+		E188A50916BA635F0054F94E /* tab_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_background@2x.png"; path = "BaiduPlayer/BrowserTabView/img/tab_background@2x.png"; sourceTree = SOURCE_ROOT; };
+		E188A50A16BA635F0054F94E /* tab_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_close.png; path = BaiduPlayer/BrowserTabView/img/tab_close.png; sourceTree = SOURCE_ROOT; };
+		E188A50B16BA635F0054F94E /* tab_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_close@2x.png"; path = "BaiduPlayer/BrowserTabView/img/tab_close@2x.png"; sourceTree = SOURCE_ROOT; };
+		E188A50C16BA635F0054F94E /* tab_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_normal.png; path = BaiduPlayer/BrowserTabView/img/tab_normal.png; sourceTree = SOURCE_ROOT; };
+		E188A50D16BA635F0054F94E /* tab_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_normal@2x.png"; path = "BaiduPlayer/BrowserTabView/img/tab_normal@2x.png"; sourceTree = SOURCE_ROOT; };
+		E188A50E16BA635F0054F94E /* tab_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_selected.png; path = BaiduPlayer/BrowserTabView/img/tab_selected.png; sourceTree = SOURCE_ROOT; };
+		E188A50F16BA635F0054F94E /* tab_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_selected@2x.png"; path = "BaiduPlayer/BrowserTabView/img/tab_selected@2x.png"; sourceTree = SOURCE_ROOT; };
+		E188A51016BA635F0054F94E /* titlebar_return_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titlebar_return_normal.png; path = BaiduPlayer/BrowserTabView/img/titlebar_return_normal.png; sourceTree = SOURCE_ROOT; };
+		E188A53F16BA63790054F94E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BaiduPlayer/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E188A54016BA63790054F94E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BaiduPlayer/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E188A54116BA63790054F94E /* BaiduPlayer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "BaiduPlayer-Info.plist"; path = "BaiduPlayer/BaiduPlayer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E188A54216BA63790054F94E /* BaiduPlayer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BaiduPlayer-Prefix.pch"; path = "BaiduPlayer/BaiduPlayer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E188A54316BA63790054F94E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BaiduPlayer/main.m; sourceTree = SOURCE_ROOT; };
+		E188A54416BA63790054F94E /* tab_new_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tab_new_add.png; path = BaiduPlayer/tab_new_add.png; sourceTree = SOURCE_ROOT; };
+		E188A54516BA63790054F94E /* tab_new_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tab_new_add@2x.png"; path = "BaiduPlayer/tab_new_add@2x.png"; sourceTree = SOURCE_ROOT; };
+		E188A54616BA63790054F94E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = BaiduPlayer/ViewController.h; sourceTree = SOURCE_ROOT; };
+		E188A54716BA63790054F94E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = BaiduPlayer/ViewController.m; sourceTree = SOURCE_ROOT; };
+		E188A55316BA6A320054F94E /* BaiduPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E188A56416BA72340054F94E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E188A56616BA72340054F94E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		110E979F15FC25EF00F0C8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1175ED716BA56D90079D2D1 /* CoreMedia.framework in Frameworks */,
+				E1175ED516BA569C0079D2D1 /* AVFoundation.framework in Frameworks */,
+				E1175ED316BA56930079D2D1 /* MediaPlayer.framework in Frameworks */,
+				110E97A715FC25EF00F0C8DF /* UIKit.framework in Frameworks */,
+				110E97A915FC25EF00F0C8DF /* Foundation.framework in Frameworks */,
+				110E97AB15FC25EF00F0C8DF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		110E979715FC25EF00F0C8DF = {
+			isa = PBXGroup;
+			children = (
+				E188A56216BA72340054F94E /* en.lproj */,
+				110E97DE15FC264400F0C8DF /* img */,
+				E1175ED816BA57780079D2D1 /* MoviePlayer */,
+				110E97DB15FC264400F0C8DF /* BrowserTabView */,
+				110E97AD15FC25EF00F0C8DF /* Supporting Files */,
+				110E97AC15FC25EF00F0C8DF /* BaiduPlayer */,
+				110E97A515FC25EF00F0C8DF /* Frameworks */,
+				E188A55316BA6A320054F94E /* BaiduPlayer.app */,
+			);
+			sourceTree = "<group>";
+		};
+		110E97A515FC25EF00F0C8DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1175ED616BA56D90079D2D1 /* CoreMedia.framework */,
+				E1175ED416BA569B0079D2D1 /* AVFoundation.framework */,
+				E1175ED216BA56930079D2D1 /* MediaPlayer.framework */,
+				110E97A615FC25EF00F0C8DF /* UIKit.framework */,
+				110E97A815FC25EF00F0C8DF /* Foundation.framework */,
+				110E97AA15FC25EF00F0C8DF /* CoreGraphics.framework */,
+				110E97C415FC25F000F0C8DF /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		110E97AC15FC25EF00F0C8DF /* BaiduPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E188A54316BA63790054F94E /* main.m */,
+				E188A53F16BA63790054F94E /* AppDelegate.h */,
+				E188A54016BA63790054F94E /* AppDelegate.m */,
+				E188A54616BA63790054F94E /* ViewController.h */,
+				E188A54716BA63790054F94E /* ViewController.m */,
+			);
+			name = BaiduPlayer;
+			path = BrowserTabViewDemo;
+			sourceTree = "<group>";
+		};
+		110E97AD15FC25EF00F0C8DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E188A54116BA63790054F94E /* BaiduPlayer-Info.plist */,
+				E188A54216BA63790054F94E /* BaiduPlayer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = BrowserTabViewDemo;
+			sourceTree = "<group>";
+		};
+		110E97DB15FC264400F0C8DF /* BrowserTabView */ = {
+			isa = PBXGroup;
+			children = (
+				E188A4DD16BA63510054F94E /* BrowserTab.h */,
+				E188A4DE16BA63510054F94E /* BrowserTab.m */,
+				E188A4DF16BA63510054F94E /* BrowserTabView.h */,
+				E188A4E016BA63510054F94E /* BrowserTabView.m */,
+			);
+			name = BrowserTabView;
+			path = BrowserTabViewDemo/BrowserTabView;
+			sourceTree = "<group>";
+		};
+		110E97DE15FC264400F0C8DF /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E188A4E316BA635F0054F94E /* ic_brightness_adjust_videoplayer_dark.png */,
+				E188A4E416BA635F0054F94E /* ic_brightness_adjust_videoplayer_light.png */,
+				E188A4E516BA635F0054F94E /* ic_brightness_titlelbar_videoplayer_pressed.png */,
+				E188A4E616BA635F0054F94E /* ic_brightness_titlelbar_videoplayer.png */,
+				E188A4E716BA635F0054F94E /* ic_download_selected.png */,
+				E188A4E816BA635F0054F94E /* ic_download_titlebar_videoplayer_disable.png */,
+				E188A4E916BA635F0054F94E /* ic_download_titlebar_videoplayer_pressed.png */,
+				E188A4EA16BA635F0054F94E /* ic_download_titlebar_videoplayer.png */,
+				E188A4EB16BA635F0054F94E /* ic_downloaded.png */,
+				E188A4EC16BA635F0054F94E /* ic_downloading.png */,
+				E188A4ED16BA635F0054F94E /* ic_episode_titlebar_videoplayer_disable.png */,
+				E188A4EE16BA635F0054F94E /* ic_episode_titlebar_videoplayer_pressed.png */,
+				E188A4EF16BA635F0054F94E /* ic_episode_titlebar_videoplayer.png */,
+				E188A4F016BA635F0054F94E /* ic_next_play_disable.png */,
+				E188A4F116BA635F0054F94E /* ic_next_play_pressed.png */,
+				E188A4F216BA635F0054F94E /* ic_next_play.png */,
+				E188A4F316BA635F0054F94E /* ic_play_media_disable.png */,
+				E188A4F416BA635F0054F94E /* ic_play_media_pressed.png */,
+				E188A4F516BA635F0054F94E /* ic_play_media.png */,
+				E188A4F616BA635F0054F94E /* ic_retreat_media_disable.png */,
+				E188A4F716BA635F0054F94E /* ic_retreat_media_pressed.png */,
+				E188A4F816BA635F0054F94E /* ic_retreat_media.png */,
+				E188A4F916BA635F0054F94E /* ic_stop_media_disable.png */,
+				E188A4FA16BA635F0054F94E /* ic_stop_media_pressed.png */,
+				E188A4FB16BA635F0054F94E /* ic_stop_media.png */,
+				E188A4FC16BA635F0054F94E /* ic_volume_btn_videoplayer_pressed.png */,
+				E188A4FD16BA635F0054F94E /* ic_volume_btn_videoplayer.png */,
+				E188A4FE16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_disable.png */,
+				E188A4FF16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_pressed.png */,
+				E188A50016BA635F0054F94E /* ic_zoom_in_btn_videoplayer.png */,
+				E188A50116BA635F0054F94E /* ic_zoom_out_btn_videoplayer_disable.png */,
+				E188A50216BA635F0054F94E /* ic_zoom_out_btn_videoplayer_pressed.png */,
+				E188A50316BA635F0054F94E /* ic_zoom_out_btn_videoplayer.png */,
+				E188A50416BA635F0054F94E /* lock_normal_lock.png */,
+				E188A50516BA635F0054F94E /* lock_normal_unlock.png */,
+				E188A50616BA635F0054F94E /* lock_press_lock.png */,
+				E188A50716BA635F0054F94E /* lock_press_unlock.png */,
+				E188A50816BA635F0054F94E /* tab_background.png */,
+				E188A54416BA63790054F94E /* tab_new_add.png */,
+				E188A54516BA63790054F94E /* tab_new_add@2x.png */,
+				E188A50916BA635F0054F94E /* tab_background@2x.png */,
+				E188A50A16BA635F0054F94E /* tab_close.png */,
+				E188A50B16BA635F0054F94E /* tab_close@2x.png */,
+				E188A50C16BA635F0054F94E /* tab_normal.png */,
+				E188A50D16BA635F0054F94E /* tab_normal@2x.png */,
+				E188A50E16BA635F0054F94E /* tab_selected.png */,
+				E188A50F16BA635F0054F94E /* tab_selected@2x.png */,
+				E188A51016BA635F0054F94E /* titlebar_return_normal.png */,
+			);
+			name = img;
+			path = BrowserTabViewDemo/BrowserTabView/img;
+			sourceTree = "<group>";
+		};
+		E1175ED816BA57780079D2D1 /* MoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E188A4CD16BA63400054F94E /* CustomMoviePlayerController.h */,
+				E188A4CE16BA63400054F94E /* CustomMoviePlayerController.m */,
+				E188A4CF16BA63400054F94E /* CustomMoviePlayerController.xib */,
+				E188A4D016BA63400054F94E /* CustomPlayerView.h */,
+				E188A4D116BA63400054F94E /* CustomPlayerView.m */,
+				E188A4D216BA63400054F94E /* JQWebVideoViewController.h */,
+				E188A4D316BA63400054F94E /* JQWebVideoViewController.m */,
+				E188A4D416BA63400054F94E /* JQWebVideoViewController.xib */,
+				E188A4D516BA63400054F94E /* MBProgressHUD.h */,
+				E188A4D616BA63400054F94E /* MBProgressHUD.m */,
+			);
+			name = MoviePlayer;
+			path = BrowserTabViewDemo;
+			sourceTree = "<group>";
+		};
+		E188A56216BA72340054F94E /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E188A56316BA72340054F94E /* InfoPlist.strings */,
+				E188A56516BA72340054F94E /* ViewController.xib */,
+			);
+			name = en.lproj;
+			path = ../BaiduPlayer/BaiduPlayer/en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		110E97A115FC25EF00F0C8DF /* BaiduPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 110E97D515FC25F000F0C8DF /* Build configuration list for PBXNativeTarget "BaiduPlayer" */;
+			buildPhases = (
+				110E979E15FC25EF00F0C8DF /* Sources */,
+				110E979F15FC25EF00F0C8DF /* Frameworks */,
+				110E97A015FC25EF00F0C8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiduPlayer;
+			productName = BrowserTabViewDemo;
+			productReference = E188A55316BA6A320054F94E /* BaiduPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		110E979915FC25EF00F0C8DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 110E979C15FC25EF00F0C8DF /* Build configuration list for PBXProject "BaiduPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 110E979715FC25EF00F0C8DF;
+			productRefGroup = 110E979715FC25EF00F0C8DF;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				110E97A115FC25EF00F0C8DF /* BaiduPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		110E97A015FC25EF00F0C8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E188A4D816BA63400054F94E /* CustomMoviePlayerController.xib in Resources */,
+				E188A4DB16BA63400054F94E /* JQWebVideoViewController.xib in Resources */,
+				E188A51116BA635F0054F94E /* ic_brightness_adjust_videoplayer_dark.png in Resources */,
+				E188A51216BA635F0054F94E /* ic_brightness_adjust_videoplayer_light.png in Resources */,
+				E188A51316BA635F0054F94E /* ic_brightness_titlelbar_videoplayer_pressed.png in Resources */,
+				E188A51416BA635F0054F94E /* ic_brightness_titlelbar_videoplayer.png in Resources */,
+				E188A51516BA635F0054F94E /* ic_download_selected.png in Resources */,
+				E188A51616BA635F0054F94E /* ic_download_titlebar_videoplayer_disable.png in Resources */,
+				E188A51716BA635F0054F94E /* ic_download_titlebar_videoplayer_pressed.png in Resources */,
+				E188A51816BA635F0054F94E /* ic_download_titlebar_videoplayer.png in Resources */,
+				E188A51916BA635F0054F94E /* ic_downloaded.png in Resources */,
+				E188A51A16BA635F0054F94E /* ic_downloading.png in Resources */,
+				E188A51B16BA635F0054F94E /* ic_episode_titlebar_videoplayer_disable.png in Resources */,
+				E188A51C16BA635F0054F94E /* ic_episode_titlebar_videoplayer_pressed.png in Resources */,
+				E188A51D16BA635F0054F94E /* ic_episode_titlebar_videoplayer.png in Resources */,
+				E188A51E16BA635F0054F94E /* ic_next_play_disable.png in Resources */,
+				E188A51F16BA635F0054F94E /* ic_next_play_pressed.png in Resources */,
+				E188A52016BA635F0054F94E /* ic_next_play.png in Resources */,
+				E188A52116BA635F0054F94E /* ic_play_media_disable.png in Resources */,
+				E188A52216BA635F0054F94E /* ic_play_media_pressed.png in Resources */,
+				E188A52316BA635F0054F94E /* ic_play_media.png in Resources */,
+				E188A52416BA635F0054F94E /* ic_retreat_media_disable.png in Resources */,
+				E188A52516BA635F0054F94E /* ic_retreat_media_pressed.png in Resources */,
+				E188A52616BA635F0054F94E /* ic_retreat_media.png in Resources */,
+				E188A52716BA635F0054F94E /* ic_stop_media_disable.png in Resources */,
+				E188A52816BA635F0054F94E /* ic_stop_media_pressed.png in Resources */,
+				E188A52916BA635F0054F94E /* ic_stop_media.png in Resources */,
+				E188A52A16BA635F0054F94E /* ic_volume_btn_videoplayer_pressed.png in Resources */,
+				E188A52B16BA635F0054F94E /* ic_volume_btn_videoplayer.png in Resources */,
+				E188A52C16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_disable.png in Resources */,
+				E188A52D16BA635F0054F94E /* ic_zoom_in_btn_videoplayer_pressed.png in Resources */,
+				E188A52E16BA635F0054F94E /* ic_zoom_in_btn_videoplayer.png in Resources */,
+				E188A52F16BA635F0054F94E /* ic_zoom_out_btn_videoplayer_disable.png in Resources */,
+				E188A53016BA635F0054F94E /* ic_zoom_out_btn_videoplayer_pressed.png in Resources */,
+				E188A53116BA635F0054F94E /* ic_zoom_out_btn_videoplayer.png in Resources */,
+				E188A53216BA635F0054F94E /* lock_normal_lock.png in Resources */,
+				E188A53316BA635F0054F94E /* lock_normal_unlock.png in Resources */,
+				E188A53416BA635F0054F94E /* lock_press_lock.png in Resources */,
+				E188A53516BA635F0054F94E /* lock_press_unlock.png in Resources */,
+				E188A53616BA635F0054F94E /* tab_background.png in Resources */,
+				E188A53716BA635F0054F94E /* tab_background@2x.png in Resources */,
+				E188A53816BA635F0054F94E /* tab_close.png in Resources */,
+				E188A53916BA635F0054F94E /* tab_close@2x.png in Resources */,
+				E188A53A16BA635F0054F94E /* tab_normal.png in Resources */,
+				E188A53B16BA635F0054F94E /* tab_normal@2x.png in Resources */,
+				E188A53C16BA635F0054F94E /* tab_selected.png in Resources */,
+				E188A53D16BA635F0054F94E /* tab_selected@2x.png in Resources */,
+				E188A53E16BA635F0054F94E /* titlebar_return_normal.png in Resources */,
+				E188A54916BA63790054F94E /* BaiduPlayer-Info.plist in Resources */,
+				E188A54B16BA63790054F94E /* tab_new_add.png in Resources */,
+				E188A54C16BA63790054F94E /* tab_new_add@2x.png in Resources */,
+				E188A56716BA72340054F94E /* InfoPlist.strings in Resources */,
+				E188A56816BA72340054F94E /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		110E979E15FC25EF00F0C8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E188A4D716BA63400054F94E /* CustomMoviePlayerController.m in Sources */,
+				E188A4D916BA63400054F94E /* CustomPlayerView.m in Sources */,
+				E188A4DA16BA63400054F94E /* JQWebVideoViewController.m in Sources */,
+				E188A4DC16BA63400054F94E /* MBProgressHUD.m in Sources */,
+				E188A4E116BA63510054F94E /* BrowserTab.m in Sources */,
+				E188A4E216BA63510054F94E /* BrowserTabView.m in Sources */,
+				E188A54816BA63790054F94E /* AppDelegate.m in Sources */,
+				E188A54A16BA63790054F94E /* main.m in Sources */,
+				E188A54D16BA63790054F94E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E188A56316BA72340054F94E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E188A56416BA72340054F94E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E188A56516BA72340054F94E /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E188A56616BA72340054F94E /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		110E97D315FC25F000F0C8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		110E97D415FC25F000F0C8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		110E97D615FC25F000F0C8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BaiduPlayer/BaiduPlayer-Prefix.pch";
+				INFOPLIST_FILE = "BaiduPlayer/BaiduPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = BaiduPlayer;
+				PUBLIC_HEADERS_FOLDER_PATH = "BaiduPlayer/BaiduPlayer-Info.plist";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		110E97D715FC25F000F0C8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BaiduPlayer/BaiduPlayer-Prefix.pch";
+				INFOPLIST_FILE = "BaiduPlayer/BaiduPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = BaiduPlayer;
+				PUBLIC_HEADERS_FOLDER_PATH = "BaiduPlayer/BaiduPlayer-Info.plist";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		110E979C15FC25EF00F0C8DF /* Build configuration list for PBXProject "BaiduPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110E97D315FC25F000F0C8DF /* Debug */,
+				110E97D415FC25F000F0C8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		110E97D515FC25F000F0C8DF /* Build configuration list for PBXNativeTarget "BaiduPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110E97D615FC25F000F0C8DF /* Debug */,
+				110E97D715FC25F000F0C8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 110E979915FC25EF00F0C8DF /* Project object */;
+}
