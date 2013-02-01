@@ -82,6 +82,8 @@
 		E188A59316BA8D1A0054F94E /* ChromeProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A58F16BA8D190054F94E /* ChromeProgressBar.m */; };
 		E188A59416BA8D1A0054F94E /* IMTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A59216BA8D1A0054F94E /* IMTWebView.m */; };
 		E188A59616BA8F490054F94E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E188A59516BA8F490054F94E /* QuartzCore.framework */; };
+		E188A59916BBB6C10054F94E /* searchbar_restart.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A59716BBB6C10054F94E /* searchbar_restart.png */; };
+		E188A59A16BBB6C10054F94E /* searchbar_restart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A59816BBB6C10054F94E /* searchbar_restart@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +175,8 @@
 		E188A59116BA8D1A0054F94E /* IMTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTWebView.h; sourceTree = "<group>"; };
 		E188A59216BA8D1A0054F94E /* IMTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTWebView.m; sourceTree = "<group>"; };
 		E188A59516BA8F490054F94E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E188A59716BBB6C10054F94E /* searchbar_restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = searchbar_restart.png; path = ../BaiduPlayer/BaiduPlayer/BrowserTabView/img/searchbar_restart.png; sourceTree = "<group>"; };
+		E188A59816BBB6C10054F94E /* searchbar_restart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "searchbar_restart@2x.png"; path = "../BaiduPlayer/BaiduPlayer/BrowserTabView/img/searchbar_restart@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 				E188A59016BA8D190054F94E /* IMTWebView */,
 				E188A58116BA7E090054F94E /* webtoolbar_back_highlighted@2x.png */,
 				E188A58216BA7E090054F94E /* webtoolbar_back_normal.png */,
+				E188A59716BBB6C10054F94E /* searchbar_restart.png */,
+				E188A59816BBB6C10054F94E /* searchbar_restart@2x.png */,
 				E188A58316BA7E090054F94E /* webtoolbar_forward_normal.png */,
 				E188A58416BA7E090054F94E /* webtoolbar_forward_normal@2x.png */,
 				E188A56216BA72340054F94E /* en.lproj */,
@@ -474,6 +480,8 @@
 				E188A58616BA7E090054F94E /* webtoolbar_back_normal.png in Resources */,
 				E188A58716BA7E090054F94E /* webtoolbar_forward_normal.png in Resources */,
 				E188A58816BA7E090054F94E /* webtoolbar_forward_normal@2x.png in Resources */,
+				E188A59916BBB6C10054F94E /* searchbar_restart.png in Resources */,
+				E188A59A16BBB6C10054F94E /* searchbar_restart@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

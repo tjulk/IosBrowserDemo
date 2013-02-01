@@ -22,6 +22,8 @@
 @property (nonatomic,retain)NSURLRequest *request;
 @property (nonatomic,retain)UIButton *backBtn;
 @property (nonatomic,retain)UIButton *forwardBtn;
+@property (nonatomic,retain)UIButton *reflashAndClosed;
+
 @property (nonatomic,retain)NSMutableArray *webviewList;
 
 @property (retain, retain) IMTWebView  *webview;

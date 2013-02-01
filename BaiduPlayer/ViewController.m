@@ -12,6 +12,7 @@
 @synthesize forwardBtn;
 @synthesize webviewList;
 @synthesize webview;
+@synthesize reflashAndClosed;
 
 - (void)didReceiveMemoryWarning
 {
@@ -73,7 +74,7 @@
     
     [backBtn addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
     
-    backBtn.frame = CGRectMake(870, 50, 50 , 40);
+    backBtn.frame = CGRectMake(860, 50, 50 , 40);
     
     [self.view addSubview:backBtn];
     
@@ -85,11 +86,24 @@
     
     [forwardBtn addTarget:self action:@selector(forward:) forControlEvents:UIControlEventTouchUpInside];
     
-    forwardBtn.frame = CGRectMake(935, 50, 50 , 40);
+    forwardBtn.frame = CGRectMake(915, 50, 50 , 40);
     
     [self.view addSubview:forwardBtn];
     
+    //reflash  close btn
+    self.reflashAndClosed = [UIButton buttonWithType:UIButtonTypeCustom];
     
+    [reflashAndClosed setBackgroundImage:[UIImage imageNamed:@"searchbar_restart@2x.png"] forState:UIControlStateNormal];
+    [reflashAndClosed setBackgroundColor:[UIColor whiteColor]];
+    [reflashAndClosed setTitleColor:[UIColor darkGrayColor] forState:(UIControlStateNormal)];
+    
+    [reflashAndClosed addTarget:self action:@selector(reflashAndClosed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    reflashAndClosed.frame = CGRectMake(970, 50, 50 , 40);
+    
+    [self.view addSubview:reflashAndClosed];
+    
+    //webview list
     webviewList = [[NSMutableArray alloc] initWithCapacity:10];
     
     IMTWebView *newWebView = [[IMTWebView alloc] initWithFrame:CGRectMake(0, 100, 1024 , 768)]; 
@@ -181,6 +195,11 @@
 {
     [webview goForward];
 
+}
+
+-(void)reflashAndClosed:(id)sender
+{
+    [webview reload];
 }
 
 
