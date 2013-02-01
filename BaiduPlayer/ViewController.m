@@ -199,7 +199,11 @@
 
 -(void)reflashAndClosed:(id)sender
 {
-    [webview reload];
+    bool isLoad = webview.isLoading;
+    if(isLoad)
+        [webview stopLoading];
+    else 
+        [webview reload];
 }
 
 
@@ -321,6 +325,14 @@
     self.backBtn.enabled = webview.canGoBack;
     self.forwardBtn.enabled = webview.canGoForward;
     self.textView.text = webview.request.URL.absoluteString;
+    
+    bool isLoad = webview.isLoading;
+    if(isLoad)
+       [reflashAndClosed setBackgroundImage:[UIImage imageNamed:@"searchbar_close@2x.png"] forState:UIControlStateNormal];
+    else {
+        [reflashAndClosed setBackgroundImage:[UIImage imageNamed:@"searchbar_restart@2x.png"] forState:UIControlStateNormal];
+    }
+    
 }
 
 

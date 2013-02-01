@@ -84,6 +84,8 @@
 		E188A59616BA8F490054F94E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E188A59516BA8F490054F94E /* QuartzCore.framework */; };
 		E188A59916BBB6C10054F94E /* searchbar_restart.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A59716BBB6C10054F94E /* searchbar_restart.png */; };
 		E188A59A16BBB6C10054F94E /* searchbar_restart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A59816BBB6C10054F94E /* searchbar_restart@2x.png */; };
+		E188A59D16BBBAA30054F94E /* searchbar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A59B16BBBAA30054F94E /* searchbar_close.png */; };
+		E188A59E16BBBAA30054F94E /* searchbar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A59C16BBBAA30054F94E /* searchbar_close@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +179,8 @@
 		E188A59516BA8F490054F94E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E188A59716BBB6C10054F94E /* searchbar_restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = searchbar_restart.png; path = ../BaiduPlayer/BaiduPlayer/BrowserTabView/img/searchbar_restart.png; sourceTree = "<group>"; };
 		E188A59816BBB6C10054F94E /* searchbar_restart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "searchbar_restart@2x.png"; path = "../BaiduPlayer/BaiduPlayer/BrowserTabView/img/searchbar_restart@2x.png"; sourceTree = "<group>"; };
+		E188A59B16BBBAA30054F94E /* searchbar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = searchbar_close.png; path = ../BaiduPlayer/BaiduPlayer/BrowserTabView/img/searchbar_close.png; sourceTree = "<group>"; };
+		E188A59C16BBBAA30054F94E /* searchbar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "searchbar_close@2x.png"; path = "../BaiduPlayer/BaiduPlayer/BrowserTabView/img/searchbar_close@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 		110E979715FC25EF00F0C8DF = {
 			isa = PBXGroup;
 			children = (
+				E188A59B16BBBAA30054F94E /* searchbar_close.png */,
+				E188A59C16BBBAA30054F94E /* searchbar_close@2x.png */,
 				E188A58D16BA8D190054F94E /* ChromeProgressBar */,
 				E188A59016BA8D190054F94E /* IMTWebView */,
 				E188A58116BA7E090054F94E /* webtoolbar_back_highlighted@2x.png */,
@@ -482,6 +488,8 @@
 				E188A58816BA7E090054F94E /* webtoolbar_forward_normal@2x.png in Resources */,
 				E188A59916BBB6C10054F94E /* searchbar_restart.png in Resources */,
 				E188A59A16BBB6C10054F94E /* searchbar_restart@2x.png in Resources */,
+				E188A59D16BBBAA30054F94E /* searchbar_close.png in Resources */,
+				E188A59E16BBBAA30054F94E /* searchbar_close@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
