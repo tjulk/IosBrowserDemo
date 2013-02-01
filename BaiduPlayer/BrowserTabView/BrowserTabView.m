@@ -55,7 +55,7 @@ static NSString *kReuseIdentifier = @"UserIndentifier";
         delegate = aDelegate;
         
         if ([self.tabsArray count]) {
-            [self setSelectedTabIndex:0 animated:NO];
+            [self setSelectedTabIndex:0 animated:YES];
         }
 
     }
