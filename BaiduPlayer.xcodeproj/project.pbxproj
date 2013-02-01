@@ -75,6 +75,13 @@
 		E188A54D16BA63790054F94E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A54716BA63790054F94E /* ViewController.m */; };
 		E188A56716BA72340054F94E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E188A56316BA72340054F94E /* InfoPlist.strings */; };
 		E188A56816BA72340054F94E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E188A56516BA72340054F94E /* ViewController.xib */; };
+		E188A58516BA7E090054F94E /* webtoolbar_back_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A58116BA7E090054F94E /* webtoolbar_back_highlighted@2x.png */; };
+		E188A58616BA7E090054F94E /* webtoolbar_back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A58216BA7E090054F94E /* webtoolbar_back_normal.png */; };
+		E188A58716BA7E090054F94E /* webtoolbar_forward_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A58316BA7E090054F94E /* webtoolbar_forward_normal.png */; };
+		E188A58816BA7E090054F94E /* webtoolbar_forward_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E188A58416BA7E090054F94E /* webtoolbar_forward_normal@2x.png */; };
+		E188A59316BA8D1A0054F94E /* ChromeProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A58F16BA8D190054F94E /* ChromeProgressBar.m */; };
+		E188A59416BA8D1A0054F94E /* IMTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E188A59216BA8D1A0054F94E /* IMTWebView.m */; };
+		E188A59616BA8F490054F94E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E188A59516BA8F490054F94E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +164,15 @@
 		E188A55316BA6A320054F94E /* BaiduPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E188A56416BA72340054F94E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E188A56616BA72340054F94E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController.xib; sourceTree = "<group>"; };
+		E188A58116BA7E090054F94E /* webtoolbar_back_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webtoolbar_back_highlighted@2x.png"; path = "../BaiduPlayer/BaiduPlayer/BrowserTabView/img/webtoolbar_back_highlighted@2x.png"; sourceTree = "<group>"; };
+		E188A58216BA7E090054F94E /* webtoolbar_back_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webtoolbar_back_normal.png; path = ../BaiduPlayer/BaiduPlayer/BrowserTabView/img/webtoolbar_back_normal.png; sourceTree = "<group>"; };
+		E188A58316BA7E090054F94E /* webtoolbar_forward_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = webtoolbar_forward_normal.png; path = ../BaiduPlayer/BaiduPlayer/BrowserTabView/img/webtoolbar_forward_normal.png; sourceTree = "<group>"; };
+		E188A58416BA7E090054F94E /* webtoolbar_forward_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webtoolbar_forward_normal@2x.png"; path = "../BaiduPlayer/BaiduPlayer/BrowserTabView/img/webtoolbar_forward_normal@2x.png"; sourceTree = "<group>"; };
+		E188A58E16BA8D190054F94E /* ChromeProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeProgressBar.h; sourceTree = "<group>"; };
+		E188A58F16BA8D190054F94E /* ChromeProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeProgressBar.m; sourceTree = "<group>"; };
+		E188A59116BA8D1A0054F94E /* IMTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTWebView.h; sourceTree = "<group>"; };
+		E188A59216BA8D1A0054F94E /* IMTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTWebView.m; sourceTree = "<group>"; };
+		E188A59516BA8F490054F94E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E188A59616BA8F490054F94E /* QuartzCore.framework in Frameworks */,
 				E1175ED716BA56D90079D2D1 /* CoreMedia.framework in Frameworks */,
 				E1175ED516BA569C0079D2D1 /* AVFoundation.framework in Frameworks */,
 				E1175ED316BA56930079D2D1 /* MediaPlayer.framework in Frameworks */,
@@ -179,6 +196,12 @@
 		110E979715FC25EF00F0C8DF = {
 			isa = PBXGroup;
 			children = (
+				E188A58D16BA8D190054F94E /* ChromeProgressBar */,
+				E188A59016BA8D190054F94E /* IMTWebView */,
+				E188A58116BA7E090054F94E /* webtoolbar_back_highlighted@2x.png */,
+				E188A58216BA7E090054F94E /* webtoolbar_back_normal.png */,
+				E188A58316BA7E090054F94E /* webtoolbar_forward_normal.png */,
+				E188A58416BA7E090054F94E /* webtoolbar_forward_normal@2x.png */,
 				E188A56216BA72340054F94E /* en.lproj */,
 				110E97DE15FC264400F0C8DF /* img */,
 				E1175ED816BA57780079D2D1 /* MoviePlayer */,
@@ -193,6 +216,7 @@
 		110E97A515FC25EF00F0C8DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E188A59516BA8F490054F94E /* QuartzCore.framework */,
 				E1175ED616BA56D90079D2D1 /* CoreMedia.framework */,
 				E1175ED416BA569B0079D2D1 /* AVFoundation.framework */,
 				E1175ED216BA56930079D2D1 /* MediaPlayer.framework */,
@@ -323,6 +347,26 @@
 			path = ../BaiduPlayer/BaiduPlayer/en.lproj;
 			sourceTree = "<group>";
 		};
+		E188A58D16BA8D190054F94E /* ChromeProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				E188A58E16BA8D190054F94E /* ChromeProgressBar.h */,
+				E188A58F16BA8D190054F94E /* ChromeProgressBar.m */,
+			);
+			name = ChromeProgressBar;
+			path = ../BaiduPlayer/BaiduPlayer/ChromeProgressBar;
+			sourceTree = "<group>";
+		};
+		E188A59016BA8D190054F94E /* IMTWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E188A59116BA8D1A0054F94E /* IMTWebView.h */,
+				E188A59216BA8D1A0054F94E /* IMTWebView.m */,
+			);
+			name = IMTWebView;
+			path = ../BaiduPlayer/BaiduPlayer/IMTWebView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -426,6 +470,10 @@
 				E188A54C16BA63790054F94E /* tab_new_add@2x.png in Resources */,
 				E188A56716BA72340054F94E /* InfoPlist.strings in Resources */,
 				E188A56816BA72340054F94E /* ViewController.xib in Resources */,
+				E188A58516BA7E090054F94E /* webtoolbar_back_highlighted@2x.png in Resources */,
+				E188A58616BA7E090054F94E /* webtoolbar_back_normal.png in Resources */,
+				E188A58716BA7E090054F94E /* webtoolbar_forward_normal.png in Resources */,
+				E188A58816BA7E090054F94E /* webtoolbar_forward_normal@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +493,8 @@
 				E188A54816BA63790054F94E /* AppDelegate.m in Sources */,
 				E188A54A16BA63790054F94E /* main.m in Sources */,
 				E188A54D16BA63790054F94E /* ViewController.m in Sources */,
+				E188A59316BA8D1A0054F94E /* ChromeProgressBar.m in Sources */,
+				E188A59416BA8D1A0054F94E /* IMTWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

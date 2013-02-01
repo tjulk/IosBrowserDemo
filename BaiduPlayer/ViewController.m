@@ -159,6 +159,7 @@
     webview = newWebView;
     webview.delegate = self;
     
+    
     //新增頁面
     [tabController addTabWithTitle:nil];
 }
