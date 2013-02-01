@@ -13,6 +13,8 @@
 @synthesize forwardBtn;
 @synthesize webviewList;
 
+@synthesize webview;
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -94,7 +96,7 @@
     
     webviewList = [[NSMutableArray alloc] initWithCapacity:10];
     
-    UIWebView *newWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, 1024 , 768)]; 
+    IMTWebView *newWebView = [[IMTWebView alloc] initWithFrame:CGRectMake(0, 100, 1024 , 768)]; 
     [webviewList addObject:newWebView];
     
     
@@ -103,6 +105,7 @@
 
     NSURLRequest *newrequest =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.pptv.com"]]; 
     [newWebView loadRequest:newrequest]; 
+    [self loadRequest];
     
     [self.view addSubview:newWebView];
 
@@ -144,7 +147,7 @@
 {
 
     
-    UIWebView *newWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, 1024 , 768)]; 
+    IMTWebView *newWebView = [[IMTWebView alloc] initWithFrame:CGRectMake(0, 100, 1024 , 768)]; 
 
     
     
@@ -152,7 +155,7 @@
     [newWebView loadRequest:addrequest]; 
     
     [self.view addSubview:newWebView];
-    
+    [self loadRequest];
     
     [webviewList addObject:newWebView];
     
@@ -170,16 +173,19 @@
     //visite url
     request =[NSURLRequest requestWithURL:[NSURL URLWithString:textView.text]]; 
     [webview loadRequest:request];
+
 }
 
 -(void)back:(id)sender
 {
     [webview goBack];
+
 }
 
 -(void)forward:(id)sender
 {
     [webview goForward];
+
 }
 
 
@@ -189,13 +195,13 @@
 {
     NSLog(@"tabview index:========%d + %d",index,[webviewList count]);
 
-    UIWebView *selectView = [webviewList objectAtIndex:index];
+    IMTWebView *selectView = [webviewList objectAtIndex:index];
     
     [self.view addSubview:selectView];
     
     webview = selectView;
     webview.delegate = self;
-    
+    webview.progressDelegate=self;
     [self updateToolbarItems];
     
     
@@ -220,24 +226,25 @@
 #pragma mark -
 #pragma mark UIWebViewDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
+- (void)webViewDidStartLoad:(IMTWebView *)webView {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self updateToolbarItems];
+    [self loadRequest];
 }
 
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
+- (void)webViewDidFinishLoad:(IMTWebView *)webView {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     [self updateToolbarItems];
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+- (void)webView:(IMTWebView *)webView didFailLoadWithError:(NSError *)error {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self updateToolbarItems];
 }
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)jqrequest navigationType:(UIWebViewNavigationType)navigationType{
+-(BOOL)webView:(IMTWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)jqrequest navigationType:(UIWebViewNavigationType)navigationType{
     NSString *str=[NSString stringWithFormat:@"%@",jqrequest.URL];
     NSRange rang=[str rangeOfString:@"mp4?"];
     if (rang.location!=NSNotFound) {
@@ -249,6 +256,39 @@
     }
     return true;
 }
+
+-(void)webView:(IMTWebView *)_webView didReceiveResourceNumber:(int)resourceNumber totalResources:(int)totalResources {
+    //Set progress value
+    [chromeBar setProgress:((float)resourceNumber) / ((float)totalResources) animated:NO];
+    
+    
+    //Reset resource count after finished
+    if (resourceNumber == totalResources) {
+        _webView.resourceCount = 0;
+        _webView.resourceCompletedCount = 0;
+    }
+}
+
+
+- (void)loadRequest {
+    
+    if (chromeBar) {
+        UIView* subview = (UIView*)chromeBar;
+        [subview removeFromSuperview];
+    }
+    
+    chromeBar = [[ChromeProgressBar alloc] initWithFrame:CGRectMake(0.0f, 93.0f, self.view.bounds.size.width, 4.0f)];
+    
+    [self.view addSubview:chromeBar];
+    
+    //[chromeBar setProgress:0.5 animated:NO];
+
+    [chromeBar release];
+
+}
+
+
+
 //刷新前進後退按鈕
 - (void)updateToolbarItems {
     self.backBtn.enabled = webview.canGoBack;

@@ -29,6 +29,7 @@
 - (void)webView:(id)view resource:(id)resource didFailLoadingWithError:(id)error fromDataSource:(id)dataSource {
     [super webView:view resource:resource didFailLoadingWithError:error fromDataSource:dataSource];
     resourceCompletedCount++;
+
     if ([self.progressDelegate respondsToSelector:@selector(webView:didReceiveResourceNumber:totalResources:)]) {
         [self.progressDelegate webView:self didReceiveResourceNumber:resourceCompletedCount totalResources:resourceCount];
     }
@@ -36,6 +37,7 @@
 
 -(void)webView:(id)view resource:(id)resource didFinishLoadingFromDataSource:(id)dataSource
 {
+    
     [super webView:view resource:resource didFinishLoadingFromDataSource:dataSource];
     resourceCompletedCount++;
     if ([self.progressDelegate respondsToSelector:@selector(webView:didReceiveResourceNumber:totalResources:)]) {
