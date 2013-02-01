@@ -1,6 +1,3 @@
-//
-//  BrowserTab.h
-//  BrowserTabDemo
 
 
 #import <UIKit/UIKit.h>

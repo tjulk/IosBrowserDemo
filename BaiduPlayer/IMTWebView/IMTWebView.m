@@ -1,10 +1,3 @@
-//
-//  IMTWebView.m
-//  webkittest
-//
-//  Created by Petr Dvorak on 11/23/11.
-//  Copyright (c) 2011 Inmite. All rights reserved.
-//
 
 #import "IMTWebView.h"
 

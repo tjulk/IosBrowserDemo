@@ -1,8 +1,3 @@
-//
-//
-//  BrowserTab.m
-//  BrowserTabViewDemo
-//
 
 
 #import "BrowserTab.h"

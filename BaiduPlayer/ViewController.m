@@ -1,7 +1,4 @@
-//
-//  ViewController.m
-//  BrowserTabViewDemo
-//
+
 #import "ViewController.h"
 #import "CustomMoviePlayerController.h"
 @implementation ViewController
