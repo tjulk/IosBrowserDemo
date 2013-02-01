@@ -57,7 +57,7 @@
 	self = [super initWithFrame:frame];
 	if(self) {
         //set bar color
-        _tintColor = [[UIColor colorWithRed:51.0f/255.0f green:153.0f/255.0f blue:255.0f/255.0f alpha:1] retain];
+        _tintColor = [[UIColor colorWithRed:51.0f/255.0f green:153.0f/255.0f blue:255.0f/255.0f alpha:0.5] retain];
 		self.progress = 0;
 	}
     

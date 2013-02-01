@@ -2,7 +2,6 @@
 //  ViewController.m
 //  BrowserTabViewDemo
 //
-
 #import "ViewController.h"
 #import "CustomMoviePlayerController.h"
 @implementation ViewController
@@ -12,14 +11,11 @@
 @synthesize backBtn;
 @synthesize forwardBtn;
 @synthesize webviewList;
-
 @synthesize webview;
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -27,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
     tabController= [[BrowserTabView alloc] initWithTabTitles:[NSArray arrayWithObjects:@"百度影音", nil]
                                                  andDelegate:self];
     tabController.delegate = self;
@@ -102,6 +98,7 @@
     
     webview = newWebView;
     webview.delegate = self;
+    webview.progressDelegate=self;
 
     NSURLRequest *newrequest =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.pptv.com"]]; 
     [newWebView loadRequest:newrequest]; 
@@ -115,6 +112,8 @@
 {
     [self setLabel:nil];
     [super viewDidUnload];
+    webview = nil;
+    webviewList = nil;
 
 }
 
@@ -140,16 +139,12 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 -(void)add:(id)sender
 {
 
-    
     IMTWebView *newWebView = [[IMTWebView alloc] initWithFrame:CGRectMake(0, 100, 1024 , 768)]; 
-
-    
     
     NSURLRequest *addrequest =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]; 
     [newWebView loadRequest:addrequest]; 
@@ -161,7 +156,7 @@
     
     webview = newWebView;
     webview.delegate = self;
-    
+    webview.progressDelegate=self;
     
     //新增頁面
     [tabController addTabWithTitle:nil];
@@ -209,34 +204,52 @@
 
 -(void)BrowserTabView:(BrowserTabView *)browserTabView didRemoveTabAtIndex:(NSUInteger)index{
     NSLog(@"刪除頁面:  %d",index);
+    IMTWebView *selectView = [webviewList objectAtIndex:index];
+    
+    [webviewList removeObject:selectView];
+    
+    [selectView removeFromSuperview];
+    [selectView release];
 }
 -(void)BrowserTabView:(BrowserTabView *)browserTabView exchangeTabAtIndex:(NSUInteger)fromIndex withTabAtIndex:(NSUInteger)toIndex{
 
  NSLog(@"BrowserTabView exchange Tab  at index:  %d with Tab at index :%d ",fromIndex,toIndex);
 }
 
-
 - (void)dealloc {
     [label release];
     [super dealloc];
 }
 
-
-
 #pragma mark -
 #pragma mark UIWebViewDelegate
-
+//開始加載webview
 - (void)webViewDidStartLoad:(IMTWebView *)webView {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self updateToolbarItems];
     [self loadRequest];
 }
 
-
+//webview加載結束
 - (void)webViewDidFinishLoad:(IMTWebView *)webView {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    
+    NSString *currentUrl = webView.request.URL.absoluteString;
+    
+    int index = 0;
+    
+    for (int i=0; i<webviewList.count; i++) {
+        
+        IMTWebView *web = [webviewList objectAtIndex:i];
+        
+        if ([currentUrl isEqual:web.request.URL.absoluteString])
+            index = i;
+    }
+    
+    [tabController updateTabTitle:index withTitle:self.navigationItem.title];
+    
     [self updateToolbarItems];
 }
 
@@ -244,6 +257,7 @@
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [self updateToolbarItems];
 }
+
 -(BOOL)webView:(IMTWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)jqrequest navigationType:(UIWebViewNavigationType)navigationType{
     NSString *str=[NSString stringWithFormat:@"%@",jqrequest.URL];
     NSRange rang=[str rangeOfString:@"mp4?"];
@@ -257,10 +271,10 @@
     return true;
 }
 
+//更新進度條
 -(void)webView:(IMTWebView *)_webView didReceiveResourceNumber:(int)resourceNumber totalResources:(int)totalResources {
     //Set progress value
     [chromeBar setProgress:((float)resourceNumber) / ((float)totalResources) animated:NO];
-    
     
     //Reset resource count after finished
     if (resourceNumber == totalResources) {
@@ -269,24 +283,18 @@
     }
 }
 
-
+//添加進度條
 - (void)loadRequest {
     
     if (chromeBar) {
         UIView* subview = (UIView*)chromeBar;
         [subview removeFromSuperview];
     }
-    
-    chromeBar = [[ChromeProgressBar alloc] initWithFrame:CGRectMake(0.0f, 93.0f, self.view.bounds.size.width, 4.0f)];
-    
+    chromeBar = [[ChromeProgressBar alloc] initWithFrame:CGRectMake(0, 50, 800, 40)];
     [self.view addSubview:chromeBar];
-    
-    //[chromeBar setProgress:0.5 animated:NO];
-
     [chromeBar release];
 
 }
-
 
 
 //刷新前進後退按鈕
@@ -295,8 +303,6 @@
     self.forwardBtn.enabled = webview.canGoForward;
     self.textView.text = webview.request.URL.absoluteString;
 }
-
-
 
 
 @end

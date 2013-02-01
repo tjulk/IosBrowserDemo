@@ -57,8 +57,6 @@ static NSString *kReuseIdentifier = @"UserIndentifier";
         if ([self.tabsArray count]) {
             [self setSelectedTabIndex:0 animated:NO];
         }
-        
-
 
     }
     
@@ -148,6 +146,13 @@ static NSString *kReuseIdentifier = @"UserIndentifier";
     return [reuseTab autorelease];
     
 }
+
+- (void) updateTabTitle:(NSInteger)index withTitle:(NSString *)tabtitle
+{
+    BrowserTab *tab = [tabsArray objectAtIndex:index];
+    tab.textLabel.text = tabtitle;
+}
+
 
 - (void)addTabWithTitle:(NSString *)title 
 {

@@ -53,4 +53,6 @@
 -(void)setSelectedTabIndex:(NSInteger)aSelectedTabIndex animated:(BOOL)animation;
 -(void)removeTabAtIndex:(NSInteger)index animated:(BOOL)animated;
 
+-(void)updateTabTitle:(NSInteger)index withTitle:(NSString *)tabtitle;
+
 @end
